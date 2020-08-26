@@ -6,7 +6,7 @@ $.ajaxPrefilter(function (options) {
    options.complete = function (res) {
       if (res.responseJSON.code == 1 && res.responseJSON.msg == '身份验证失败') {
          localStorage.removeItem('details');
-         location.href = '../login.html';
+         location.href = './login.html';
       }
    }
    //设置token
